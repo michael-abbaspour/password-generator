@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password Generator</title>
+	<link rel="stylesheet" href="./styles.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Password Generator</h1>
+		<label for="passwordInput" style="display: none"></label>
+		<input readonly type="text" id="passwordInput" class="generated-password" placeholder="Password...">
+		<form id="password-generator-form">
+			<div class="form-group">
+				<label for="characterLengthRange">Character Length</label>
+				<input type="range" id="characterLengthRange" min="1" max="128" value="35">
+				<label for="characterLengthNumber"></label>
+				<input type="text" id="characterLengthNumber" value="35">
+			</div>
+			<div class="form-group">
+				<label for="includeLowercase">Include Lowercase</label>
+				<input type="checkbox" id="includeLowercase">
+			</div>
+			<div class="form-group">
+				<label for="includeUppercase">Include Uppercase</label>
+				<input type="checkbox" id="includeUppercase">
+			</div>
+			<div class="form-group">
+				<label for="includeNumeric">Include Numeric</label>
+				<input type="checkbox" id="includeNumeric">
+			</div>
+			<div class="form-group">
+				<label for="includeSymbols">Include Symbols</label>
+				<input type="checkbox" id="includeSymbols">
+			</div>
+			<div class="validation">
+				<ul class="error-messages"></ul>
+			</div>
+			<div class="btn-container">
+				<button type="submit" id="generatePassword">Generate Password</button>
+				<button id="copyPassword">Copy Password</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
